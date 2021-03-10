@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pWX-pA-CHB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="wyU-MJ-efV">
+            <objects>
+                <navigationController id="pWX-pA-CHB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="thj-RY-KZB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DKh-dW-Qrh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrg-6q-GAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-909" y="88"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KingsCup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kings Cub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-nz-eVu">
+                                <rect key="frame" x="112" y="168" width="190" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="nCo-a0-miJ">
+                                <rect key="frame" x="0.0" y="326" width="414" height="232"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-Lb-D4r">
+                                        <rect key="frame" x="133.5" y="0.0" width="147" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Play Game!"/>
+                                        <connections>
+                                            <segue destination="8ci-sB-Qlc" kind="show" id="DVF-Yn-8k1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-l0-csL">
+                                        <rect key="frame" x="128" y="92" width="158" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="How To Play"/>
+                                        <connections>
+                                            <segue destination="exM-7x-Ccj" kind="show" id="382-T8-dNi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9P-qg-Ac5">
+                                        <rect key="frame" x="163" y="184" width="88" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Option"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wN1-d2-Cn5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nCo-a0-miJ" firstAttribute="top" secondItem="Nes-nz-eVu" secondAttribute="bottom" constant="110" id="4jS-1L-veK"/>
+                            <constraint firstItem="nCo-a0-miJ" firstAttribute="centerX" secondItem="wN1-d2-Cn5" secondAttribute="centerX" id="LqH-wa-gWi"/>
+                            <constraint firstItem="Nes-nz-eVu" firstAttribute="centerX" secondItem="wN1-d2-Cn5" secondAttribute="centerX" id="OnS-IK-8Bx"/>
+                            <constraint firstItem="wN1-d2-Cn5" firstAttribute="trailing" secondItem="nCo-a0-miJ" secondAttribute="trailing" id="Rig-nR-fLT"/>
+                            <constraint firstItem="nCo-a0-miJ" firstAttribute="leading" secondItem="wN1-d2-Cn5" secondAttribute="leading" id="ijf-rY-mws"/>
+                            <constraint firstItem="Nes-nz-eVu" firstAttribute="top" secondItem="wN1-d2-Cn5" secondAttribute="top" constant="80" id="wGT-0f-SV7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ycC-6J-sQc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="88"/>
+        </scene>
+        <!--Player Setup-->
+        <scene sceneID="hIu-UZ-9JC">
+            <objects>
+                <viewController id="8ci-sB-Qlc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sRE-au-hTD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xVL-rT-4pQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Player Setup" id="tu0-8f-EkC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7es-y5-HgW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="-450"/>
+        </scene>
+        <!--How To Play-->
+        <scene sceneID="zOe-rS-8ie">
+            <objects>
+                <viewController id="exM-7x-Ccj" customClass="HowToPlayViewController" customModule="KingsCup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Keh-UF-iAh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="텍스트 뷰 ~~~ " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-Mo-RKb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="msY-qS-9Gn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aZf-Mo-RKb" firstAttribute="leading" secondItem="msY-qS-9Gn" secondAttribute="leading" id="CYh-sm-Cby"/>
+                            <constraint firstItem="msY-qS-9Gn" firstAttribute="bottom" secondItem="aZf-Mo-RKb" secondAttribute="bottom" id="URs-B8-qbq"/>
+                            <constraint firstItem="msY-qS-9Gn" firstAttribute="trailing" secondItem="aZf-Mo-RKb" secondAttribute="trailing" id="oPl-ql-8FO"/>
+                            <constraint firstItem="aZf-Mo-RKb" firstAttribute="top" secondItem="msY-qS-9Gn" secondAttribute="top" id="xTx-jx-KQB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="How To Play" id="goQ-ov-2Ch"/>
+                    <connections>
+                        <outlet property="textView" destination="aZf-Mo-RKb" id="4zo-dL-Kjr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Z9-z4-Pkk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235" y="341"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
