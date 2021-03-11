@@ -90,8 +90,39 @@
                     <view key="view" contentMode="scaleToFill" id="sRE-au-hTD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="250" translatesAutoresizingMaskIntoConstraints="NO" id="x76-as-uD0">
+                                <rect key="frame" x="20" y="108" width="374" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wre-Ao-Idv">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDM-x6-03E">
+                                        <rect key="frame" x="322" y="0.0" width="52" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="+"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B9J-lJ-OYZ">
+                                <rect key="frame" x="0.0" y="147" width="414" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xVL-rT-4pQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x76-as-uD0" firstAttribute="top" secondItem="xVL-rT-4pQ" secondAttribute="top" constant="20" id="3xD-xT-eqI"/>
+                            <constraint firstItem="xVL-rT-4pQ" firstAttribute="bottom" secondItem="B9J-lJ-OYZ" secondAttribute="bottom" id="7VI-L1-xz8"/>
+                            <constraint firstItem="xVL-rT-4pQ" firstAttribute="trailing" secondItem="x76-as-uD0" secondAttribute="trailing" constant="20" id="On7-mN-iGO"/>
+                            <constraint firstItem="B9J-lJ-OYZ" firstAttribute="top" secondItem="x76-as-uD0" secondAttribute="bottom" id="iLp-Fn-OsV"/>
+                            <constraint firstItem="xVL-rT-4pQ" firstAttribute="trailing" secondItem="B9J-lJ-OYZ" secondAttribute="trailing" id="jYW-HU-UaH"/>
+                            <constraint firstItem="x76-as-uD0" firstAttribute="leading" secondItem="xVL-rT-4pQ" secondAttribute="leading" constant="20" id="lMH-B5-Hsa"/>
+                            <constraint firstItem="B9J-lJ-OYZ" firstAttribute="leading" secondItem="xVL-rT-4pQ" secondAttribute="leading" id="r4u-0h-gSq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Player Setup" id="tu0-8f-EkC"/>
                 </viewController>
