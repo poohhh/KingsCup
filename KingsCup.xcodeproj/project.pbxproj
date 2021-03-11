@@ -15,6 +15,8 @@
 		BA0D03FA25F8F073005178C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA0D03F925F8F073005178C0 /* Assets.xcassets */; };
 		BA0D03FD25F8F073005178C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA0D03FB25F8F073005178C0 /* LaunchScreen.storyboard */; };
 		BA0D040725F8F2F3005178C0 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0D040625F8F2F3005178C0 /* HowToPlayViewController.swift */; };
+		BA4DD2C025F9CBC9004C1FFA /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4DD2BF25F9CBC9004C1FFA /* SetupViewController.swift */; };
+		BAD4ECC425FA1DE20080A981 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4ECC325FA1DE20080A981 /* PlayGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BA0D03FC25F8F073005178C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA0D03FE25F8F073005178C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA0D040625F8F2F3005178C0 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		BA4DD2BF25F9CBC9004C1FFA /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		BAD4ECC325FA1DE20080A981 /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				BA0D03EF25F8F072005178C0 /* SceneDelegate.swift */,
 				BA0D03F125F8F072005178C0 /* ViewController.swift */,
 				BA0D040625F8F2F3005178C0 /* HowToPlayViewController.swift */,
+				BA4DD2BF25F9CBC9004C1FFA /* SetupViewController.swift */,
+				BAD4ECC325FA1DE20080A981 /* PlayGameViewController.swift */,
 				BA0D03F325F8F072005178C0 /* Main.storyboard */,
 				BA0D03F925F8F073005178C0 /* Assets.xcassets */,
 				BA0D03FB25F8F073005178C0 /* LaunchScreen.storyboard */,
@@ -144,9 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA0D03F225F8F072005178C0 /* ViewController.swift in Sources */,
+				BAD4ECC425FA1DE20080A981 /* PlayGameViewController.swift in Sources */,
 				BA0D03F825F8F072005178C0 /* KingsCup.xcdatamodeld in Sources */,
 				BA0D03EE25F8F072005178C0 /* AppDelegate.swift in Sources */,
 				BA0D03F025F8F072005178C0 /* SceneDelegate.swift in Sources */,
+				BA4DD2C025F9CBC9004C1FFA /* SetupViewController.swift in Sources */,
 				BA0D040725F8F2F3005178C0 /* HowToPlayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +310,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.kerri.KingsCup;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.kerri.MyKingsCup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,7 +330,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = kr.kerri.KingsCup;
+				PRODUCT_BUNDLE_IDENTIFIER = kr.kerri.MyKingsCup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
