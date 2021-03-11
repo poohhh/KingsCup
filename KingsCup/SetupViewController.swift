@@ -20,7 +20,9 @@ class SetupViewController: UIViewController {
         let cell = contentView?.superview as! UITableViewCell
         
         if let indexPath = playerTableView.indexPath(for: cell) {
-            users[indexPath.row] = sender.text!
+            if let text = sender.text, text.count > 0 {
+                users[indexPath.row] = text
+            }
         }
     }
     
