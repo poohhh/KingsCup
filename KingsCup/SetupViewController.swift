@@ -15,6 +15,7 @@ class SetupViewController: UIViewController {
     
     @IBOutlet weak var playerTableView: UITableView!
     
+    
     @IBAction func valueChanged(_ sender: UITextField) {
         let contentView = sender.superview
         let cell = contentView?.superview as! UITableViewCell
@@ -22,13 +23,25 @@ class SetupViewController: UIViewController {
         if let indexPath = playerTableView.indexPath(for: cell) {
             if let text = sender.text, text.count > 0 {
                 users[indexPath.row] = text
+            } else {
+                users[indexPath.row] = "Player\(indexPath.row + 1)"
             }
         }
+        
     }
     
     
     @IBAction func addPlayer(_ sender: UIButton) {
-        users.append("Player\(users.count + 1)")
+        if users.count >= 52 {
+            let alert = UIAlertController(title: "Info", message: "최대 52명까지만 가능합니다.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            users.append("Player\(users.count + 1)")
+        }
         
         playerTableView.reloadData()
     }
@@ -73,6 +86,11 @@ class SetupViewController: UIViewController {
         playGameViewController.users = self.users
     }
     
+    @IBAction func doneBtnClicked (sender: Any) {
+        //click action.
+        self.view.endEditing(true)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +114,17 @@ extension SetupViewController: UITableViewDataSource {
         
         if let playerName = cell.viewWithTag(100) as? UITextField {
             playerName.text = target
+            let keyboardToolbar = UIToolbar()
+            let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            let doneBarButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneBtnClicked))
+            
+            keyboardToolbar.items = [flexBarButton, doneBarButton]
+            keyboardToolbar.sizeToFit()
+            keyboardToolbar.tintColor = UIColor.systemGray
+            
+            playerName.inputAccessoryView = keyboardToolbar
         }
+        
         
         
         tableView.beginUpdates()
@@ -108,3 +136,6 @@ extension SetupViewController: UITableViewDataSource {
     }
 
 }
+
+
+
