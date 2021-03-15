@@ -54,7 +54,9 @@ class PlayGameViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
             self.navigationController?.popToRootViewController(animated: true)
         })
-        
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action) in
+           
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -64,6 +66,9 @@ class PlayGameViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         })
         
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action) in
+           
+        }))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -83,7 +88,6 @@ class PlayGameViewController: UIViewController {
         imageView.addGestureRecognizer(tapGesture)
         imageView.isUserInteractionEnabled = true
         
-        print(users)
         
         nowStack.layer.cornerRadius = nowStack.frame.height * 0.30
         remainStack.layer.cornerRadius = remainStack.frame.height * 0.30
@@ -95,11 +99,8 @@ class PlayGameViewController: UIViewController {
         
         
         imageView.animationImages = images
-
         imageView.animationDuration = 0.8
         imageView.animationRepeatCount = 0
-        
-        
         
         for i in 0...51 {
             array.append(i)
@@ -127,7 +128,7 @@ class PlayGameViewController: UIViewController {
         }
         
         array.shuffle()
-        print(array)
+        //print(array)
     }
     
     @objc func touchToImage() {

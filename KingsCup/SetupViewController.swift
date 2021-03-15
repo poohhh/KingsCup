@@ -126,7 +126,6 @@ extension SetupViewController: UITableViewDataSource {
         }
         
         
-        
         tableView.beginUpdates()
         tableView.insertRows(at: [indexPath], with: .automatic)
         tableView.deleteRows(at: [indexPath], with: .automatic)
