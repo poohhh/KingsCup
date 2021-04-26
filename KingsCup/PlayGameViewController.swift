@@ -36,14 +36,55 @@ class PlayGameViewController: UIViewController {
     
     @IBOutlet weak var nowStack: UIStackView!
     
-    
     @IBOutlet weak var remainStack: UIStackView!
+    
+    var cardK_count = 0
+    var card = ""
+    var iscardK = false
+    
+    func shuffleCard() {
+        for i in 0...51 {
+            array.append(i)
+        }
+        
+        for i in 1...10 {
+            if i == 1 {
+                cards.append("AC")
+                cards.append("AD")
+                cards.append("AH")
+                cards.append("AS")
+            } else {
+                cards.append("\(i)C")
+                cards.append("\(i)D")
+                cards.append("\(i)H")
+                cards.append("\(i)S")
+            }
+        }
+        
+        for c in ["J", "Q", "K"] {
+            cards.append("\(c)C")
+            cards.append("\(c)D")
+            cards.append("\(c)H")
+            cards.append("\(c)S")
+        }
+        
+        array.shuffle()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultDetailViewController = segue.destination as? ResultDetailViewController else { return }
         
         if now - 1 >= 0 && now - 1 < array.count {
-            resultDetailViewController.result = self.cards[array[now-1]]
+            card = self.cards[array[now-1]]
+            resultDetailViewController.result = card
+        }
+        
+        if card.hasPrefix("K") {
+            cardK_count += 1
+            print(cardK_count)
+            iscardK = true
+        } else {
+            iscardK = false
         }
         
         imageView.stopAnimating()
@@ -80,7 +121,7 @@ class PlayGameViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = exitButton
         
         let backButton = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(self.backAction(sender:)))
-        
+
         self.navigationItem.leftBarButtonItem = backButton
         
         
@@ -102,39 +143,12 @@ class PlayGameViewController: UIViewController {
         imageView.animationDuration = 0.8
         imageView.animationRepeatCount = 0
         
-        for i in 0...51 {
-            array.append(i)
-        }
+        shuffleCard()
         
-        for i in 1...10 {
-            if i == 1 {
-                cards.append("AC")
-                cards.append("AD")
-                cards.append("AH")
-                cards.append("AS")
-            } else {
-                cards.append("\(i)C")
-                cards.append("\(i)D")
-                cards.append("\(i)H")
-                cards.append("\(i)S")
-            }
-        }
-        
-        for c in ["J", "Q", "K"] {
-            cards.append("\(c)C")
-            cards.append("\(c)D")
-            cards.append("\(c)H")
-            cards.append("\(c)S")
-        }
-        
-        array.shuffle()
-        //print(array)
     }
     
     @objc func touchToImage() {
         now += 1
-        
-        playerName.text = "\(users[now % users.count]) Pick a Card!"
         
         if now == array.count + 1{
             let alert = UIAlertController(title: "End Game", message: "처음으로 돌아가시겠습니까?", preferredStyle: .alert)
@@ -146,8 +160,6 @@ class PlayGameViewController: UIViewController {
         }
         
         if now <= 52 {
-            playedCardNum.text = "\(now)"
-            remainCardNum.text = "\(52 - now)"
             performSegue(withIdentifier: "showDetail", sender: nil)
         }
         
@@ -157,8 +169,36 @@ class PlayGameViewController: UIViewController {
         super.viewDidAppear(animated)
         
         imageView.startAnimating()
+        
+        if iscardK {
+            if cardK_count < 4 {
+                let alert = UIAlertController(title: "King 카드가 나왔네요!", message: "\(cardK_count)번째 킹스컵을 제조하세요!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
+                })
+                
+                self.present(alert, animated: true, completion: nil)
+            } else if cardK_count == 4 {
+                let alert = UIAlertController(title: "킹스컵 당첨!", message: "킹스컵 걸렸습니다~!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
+                })
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        }
+        
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        playerName.text = "\(users[now % users.count]) Pick a Card!"
+        
+        if now <= 52 {
+            playedCardNum.text = "\(now)"
+            remainCardNum.text = "\(52 - now)"
+        }
+    }
 }
 
 

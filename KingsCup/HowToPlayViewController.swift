@@ -9,7 +9,6 @@ import UIKit
 
 class HowToPlayViewController: UIViewController {
     
-    
     @IBOutlet weak var textView: UITextView!
     
     let rule = ["J ", "Q ", "K ", "A "]

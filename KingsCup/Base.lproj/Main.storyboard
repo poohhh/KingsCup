@@ -86,7 +86,9 @@
                             <constraint firstItem="nCo-a0-miJ" firstAttribute="leading" secondItem="wN1-d2-Cn5" secondAttribute="leading" id="ijf-rY-mws"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ycC-6J-sQc"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ycC-6J-sQc">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="gbf-Vy-rO1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="howToPlayButton" destination="I26-l0-csL" id="Len-3E-0qI"/>
                         <outlet property="imageView" destination="DHj-mj-7Se" id="ayv-kc-aUC"/>
@@ -132,7 +134,7 @@
                                 <color key="backgroundColor" red="0.87190133329999997" green="0.64993447069999999" blue="0.33060508970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.87190133329999997" green="0.64993447069999999" blue="0.33060508970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" id="9Yx-fU-3P3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="customCell" id="9Yx-fU-3P3">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Yx-fU-3P3" id="tBf-bS-XpR">
@@ -204,7 +206,9 @@
                             <constraint firstItem="6rb-jz-8zs" firstAttribute="top" secondItem="xVL-rT-4pQ" secondAttribute="top" id="zcl-82-ogi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Player Setup" id="tu0-8f-EkC"/>
+                    <navigationItem key="navigationItem" title="Player Setup" id="tu0-8f-EkC">
+                        <barButtonItem key="backBarButtonItem" title="Reset" id="xiV-jQ-DDH"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="playerTableView" destination="TaU-qc-3Fx" id="fCC-Wb-jEU"/>
                         <segue destination="Hcj-3W-t8i" kind="show" identifier="play" id="zSj-kJ-d3U"/>
@@ -419,6 +423,7 @@
             <point key="canvasLocation" x="1234.7826086956522" y="340.84821428571428"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="add-friend" width="32" height="32"/>
         <image name="back_cards-7" width="3231" height="1562"/>

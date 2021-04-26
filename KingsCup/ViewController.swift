@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         imageView.center.x = self.view.frame.width + 30
         nameLabel.center.x = self.view.frame.width + 30
         
-        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 30, options: UIView.AnimationOptions.allowUserInteraction, animations: {
+        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 30, options: [], animations: {
             self.imageView.center.x = self.view.frame.width / 2
             self.nameLabel.center.x = self.view.frame.width / 2
             self.playButton.center.x = self.view.frame.width / 2
