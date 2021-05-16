@@ -92,13 +92,14 @@ class SetupViewController: UIViewController {
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
 
 }
+
 
 
 extension SetupViewController: UITableViewDataSource {

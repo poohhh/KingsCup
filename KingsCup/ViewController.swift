@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -31,16 +32,10 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        playButton.center.x = self.view.frame.width + 30
-        howToPlayButton.center.x = self.view.frame.width + 30
-        imageView.center.x = self.view.frame.width + 30
-        nameLabel.center.x = self.view.frame.width + 30
+        stackView.center.x = self.view.frame.width + 30
         
         UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 30, options: [], animations: {
-            self.imageView.center.x = self.view.frame.width / 2
-            self.nameLabel.center.x = self.view.frame.width / 2
-            self.playButton.center.x = self.view.frame.width / 2
-            self.howToPlayButton.center.x = self.view.frame.width / 2
+            self.stackView.center.x = self.view.frame.width / 2
         }, completion: nil)
     }
 

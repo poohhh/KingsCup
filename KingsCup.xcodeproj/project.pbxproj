@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,9 +18,12 @@
 		BA4DD2C025F9CBC9004C1FFA /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4DD2BF25F9CBC9004C1FFA /* SetupViewController.swift */; };
 		BA8A17B925FB469D00C19BFD /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A17B825FB469D00C19BFD /* ResultDetailViewController.swift */; };
 		BAD4ECC425FA1DE20080A981 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4ECC325FA1DE20080A981 /* PlayGameViewController.swift */; };
+		E84EC4F4F3275958286B269B /* Pods_KingsCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC7DFF5914BA27816A57FD /* Pods_KingsCup.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		721B65D0809E37B0BDB487D3 /* Pods-KingsCup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KingsCup.release.xcconfig"; path = "Target Support Files/Pods-KingsCup/Pods-KingsCup.release.xcconfig"; sourceTree = "<group>"; };
+		75CC7DFF5914BA27816A57FD /* Pods_KingsCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KingsCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0D03EA25F8F072005178C0 /* KingsCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingsCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA0D03ED25F8F072005178C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA0D03EF25F8F072005178C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		BA4DD2BF25F9CBC9004C1FFA /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		BA8A17B825FB469D00C19BFD /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
 		BAD4ECC325FA1DE20080A981 /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
+		FB8564EA695C614669FB4DD1 /* Pods-KingsCup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KingsCup.debug.xcconfig"; path = "Target Support Files/Pods-KingsCup/Pods-KingsCup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84EC4F4F3275958286B269B /* Pods_KingsCup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B6C71A73EE3489773F003A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB8564EA695C614669FB4DD1 /* Pods-KingsCup.debug.xcconfig */,
+				721B65D0809E37B0BDB487D3 /* Pods-KingsCup.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA0D03E125F8F072005178C0 = {
 			isa = PBXGroup;
 			children = (
 				BA0D03EC25F8F072005178C0 /* KingsCup */,
 				BA0D03EB25F8F072005178C0 /* Products */,
+				27B6C71A73EE3489773F003A /* Pods */,
+				EFD22D175848E1E14D7838EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +98,14 @@
 			path = KingsCup;
 			sourceTree = "<group>";
 		};
+		EFD22D175848E1E14D7838EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75CC7DFF5914BA27816A57FD /* Pods_KingsCup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA0D040125F8F073005178C0 /* Build configuration list for PBXNativeTarget "KingsCup" */;
 			buildPhases = (
+				E22362E863BCFC8002C45A43 /* [CP] Check Pods Manifest.lock */,
 				BA0D03E625F8F072005178C0 /* Sources */,
 				BA0D03E725F8F072005178C0 /* Frameworks */,
 				BA0D03E825F8F072005178C0 /* Resources */,
+				FA13C0C3E865C44A9A79E1AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +172,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E22362E863BCFC8002C45A43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KingsCup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA13C0C3E865C44A9A79E1AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KingsCup/Pods-KingsCup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KingsCup/Pods-KingsCup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KingsCup/Pods-KingsCup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA0D03E625F8F072005178C0 /* Sources */ = {
@@ -303,11 +371,12 @@
 		};
 		BA0D040225F8F073005178C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB8564EA695C614669FB4DD1 /* Pods-KingsCup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.011;
+				CURRENT_PROJECT_VERSION = 1.012;
 				DEVELOPMENT_TEAM = 7STK9RT8DD;
 				INFOPLIST_FILE = KingsCup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -315,7 +384,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.kerri.MyKingsCup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -325,11 +394,12 @@
 		};
 		BA0D040325F8F073005178C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721B65D0809E37B0BDB487D3 /* Pods-KingsCup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.011;
+				CURRENT_PROJECT_VERSION = 1.012;
 				DEVELOPMENT_TEAM = 7STK9RT8DD;
 				INFOPLIST_FILE = KingsCup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -337,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.kerri.MyKingsCup;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

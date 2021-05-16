@@ -33,57 +33,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crowns" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-mj-7Se">
-                                <rect key="frame" x="0.0" y="118" width="414" height="128"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="nCo-a0-miJ">
-                                <rect key="frame" x="0.0" y="396" width="414" height="144"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ktu-vJ-AkJ">
+                                <rect key="frame" x="20" y="108" width="374" height="422"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-Lb-D4r">
-                                        <rect key="frame" x="104" y="0.0" width="206" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.64638138519999999" blue="0.090594227200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="     Play Game!    " backgroundImage="orange-rectangle">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="8ci-sB-Qlc" kind="show" id="EnJ-37-4mi"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-l0-csL">
-                                        <rect key="frame" x="102" y="94" width="210" height="50"/>
-                                        <color key="backgroundColor" red="1" green="0.64638138519999999" blue="0.090594227200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="    How To Play    " backgroundImage="orange-rectangle">
-                                            <color key="titleColor" red="0.61838754979999999" green="0.021380769859999999" blue="0.36623531549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="exM-7x-Ccj" kind="show" id="382-T8-dNi"/>
-                                        </connections>
-                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crowns" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-mj-7Se">
+                                        <rect key="frame" x="123" y="0.0" width="128" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kings Cup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-nz-eVu">
+                                        <rect key="frame" x="90.5" y="178" width="193" height="50"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" red="0.61838754981455168" green="0.021380769858510309" blue="0.36623531554713468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="3" height="-2"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="nCo-a0-miJ">
+                                        <rect key="frame" x="82" y="278" width="210" height="144"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-Lb-D4r">
+                                                <rect key="frame" x="2" y="0.0" width="206" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.64638138519999999" blue="0.090594227200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="     Play Game!    " backgroundImage="orange-rectangle">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8ci-sB-Qlc" kind="show" id="EnJ-37-4mi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-l0-csL">
+                                                <rect key="frame" x="0.0" y="94" width="210" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.64638138519999999" blue="0.090594227200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="    How To Play    " backgroundImage="orange-rectangle">
+                                                    <color key="titleColor" red="0.61838754979999999" green="0.021380769859999999" blue="0.36623531549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="exM-7x-Ccj" kind="show" id="382-T8-dNi"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kings Cup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nes-nz-eVu">
-                                <rect key="frame" x="110.5" y="246" width="193" height="50"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" red="0.61838754981455168" green="0.021380769858510309" blue="0.36623531554713468" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="3" height="-2"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wN1-d2-Cn5"/>
                         <color key="backgroundColor" red="0.90279642740885413" green="0.77041406986375172" blue="0.64644817918525466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wN1-d2-Cn5" firstAttribute="trailing" secondItem="DHj-mj-7Se" secondAttribute="trailing" id="0DC-CY-KOU"/>
-                            <constraint firstItem="DHj-mj-7Se" firstAttribute="top" secondItem="wN1-d2-Cn5" secondAttribute="top" constant="30" id="9Ae-x0-g4C"/>
-                            <constraint firstItem="Nes-nz-eVu" firstAttribute="top" secondItem="DHj-mj-7Se" secondAttribute="bottom" id="Dfz-3g-e5m"/>
-                            <constraint firstItem="nCo-a0-miJ" firstAttribute="centerX" secondItem="wN1-d2-Cn5" secondAttribute="centerX" id="LqH-wa-gWi"/>
-                            <constraint firstItem="Nes-nz-eVu" firstAttribute="centerX" secondItem="wN1-d2-Cn5" secondAttribute="centerX" id="OnS-IK-8Bx"/>
-                            <constraint firstItem="wN1-d2-Cn5" firstAttribute="trailing" secondItem="nCo-a0-miJ" secondAttribute="trailing" id="Rig-nR-fLT"/>
-                            <constraint firstItem="nCo-a0-miJ" firstAttribute="top" secondItem="Nes-nz-eVu" secondAttribute="bottom" constant="100" id="ShU-Z9-Sb0"/>
-                            <constraint firstItem="DHj-mj-7Se" firstAttribute="leading" secondItem="wN1-d2-Cn5" secondAttribute="leading" id="anM-XA-WQc"/>
-                            <constraint firstItem="nCo-a0-miJ" firstAttribute="leading" secondItem="wN1-d2-Cn5" secondAttribute="leading" id="ijf-rY-mws"/>
+                            <constraint firstItem="Ktu-vJ-AkJ" firstAttribute="top" secondItem="wN1-d2-Cn5" secondAttribute="top" constant="20" id="OWT-UT-jGD"/>
+                            <constraint firstItem="Ktu-vJ-AkJ" firstAttribute="leading" secondItem="wN1-d2-Cn5" secondAttribute="leading" constant="20" id="WCg-ol-73s"/>
+                            <constraint firstItem="wN1-d2-Cn5" firstAttribute="trailing" secondItem="Ktu-vJ-AkJ" secondAttribute="trailing" constant="20" id="sNw-st-Kvn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ycC-6J-sQc">
@@ -94,6 +93,7 @@
                         <outlet property="imageView" destination="DHj-mj-7Se" id="ayv-kc-aUC"/>
                         <outlet property="nameLabel" destination="Nes-nz-eVu" id="ok8-ia-f9o"/>
                         <outlet property="playButton" destination="Fkc-Lb-D4r" id="Qgi-Z4-5lk"/>
+                        <outlet property="stackView" destination="Ktu-vJ-AkJ" id="eA0-8Y-WOu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,18 +109,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="6rb-jz-8zs">
-                                <rect key="frame" x="0.0" y="88" width="414" height="48"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fw-cM-XIs">
-                                        <rect key="frame" x="8" y="8" width="99" height="32"/>
+                                        <rect key="frame" x="8" y="8" width="99" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGk-09-tYN">
-                                        <rect key="frame" x="307" y="8" width="99" height="32"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" image="add-friend"/>
+                                        <rect key="frame" x="307" y="8" width="99" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Add" image="plus" catalog="system"/>
                                         <connections>
                                             <action selector="addPlayer:" destination="8ci-sB-Qlc" eventType="touchUpInside" id="tJF-hf-X0b"/>
                                         </connections>
@@ -130,7 +130,7 @@
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-qc-3Fx">
-                                <rect key="frame" x="0.0" y="136" width="414" height="576"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="584"/>
                                 <color key="backgroundColor" red="0.87190133329999997" green="0.64993447069999999" blue="0.33060508970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.87190133329999997" green="0.64993447069999999" blue="0.33060508970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -425,12 +425,12 @@
     </scenes>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="add-friend" width="32" height="32"/>
         <image name="back_cards-7" width="3231" height="1562"/>
         <image name="card_back" width="755" height="1057"/>
         <image name="crowns" width="128" height="128"/>
         <image name="gray" width="691" height="1056"/>
         <image name="orange-rectangle" width="168" height="50"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
