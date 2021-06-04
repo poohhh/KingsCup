@@ -133,7 +133,7 @@ class PlayGameViewController: UIViewController {
         nowStack.layer.cornerRadius = nowStack.frame.height * 0.30
         remainStack.layer.cornerRadius = remainStack.frame.height * 0.30
         
-        playerName.text = "\(users[0]) Pick a Card!"
+        playerName.text = "\(users[0])"
         
         playedCardNum.text = "\(now)"
         remainCardNum.text = "\(52 - now)"
@@ -192,7 +192,7 @@ class PlayGameViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
-        playerName.text = "\(users[now % users.count]) Pick a Card!"
+        playerName.text = "\(users[now % users.count])"
         
         if now <= 52 {
             playedCardNum.text = "\(now)"

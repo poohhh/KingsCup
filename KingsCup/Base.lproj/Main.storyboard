@@ -141,11 +141,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ll2-Un-i4t">
+                                                <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ll2-Un-i4t">
                                                     <rect key="frame" x="10" y="12" width="145" height="36"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="145" id="ZYb-j0-gVk"/>
+                                                    </constraints>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="8ci-sB-Qlc" eventType="editingChanged" id="sEY-Ma-YYb"/>
@@ -266,15 +269,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Card!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jJ-XX-Tjr">
-                                <rect key="frame" x="0.0" y="753" width="414" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jJ-XX-Tjr">
+                                <rect key="frame" x="0.0" y="755.5" width="414" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-KZ-woC">
-                                <rect key="frame" x="0.0" y="182.5" width="414" height="490.5"/>
+                                <rect key="frame" x="0.0" y="182.5" width="414" height="493"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Card!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hw-qh-JK6">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f0X-sp-J42"/>
                         <color key="backgroundColor" red="0.90279642739999999" green="0.77041406990000005" blue="0.64644817919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -282,6 +291,7 @@
                             <constraint firstItem="DFN-od-Zif" firstAttribute="leading" secondItem="f0X-sp-J42" secondAttribute="leading" constant="20" id="5DV-fZ-kA6"/>
                             <constraint firstItem="3JT-KZ-woC" firstAttribute="leading" secondItem="f0X-sp-J42" secondAttribute="leading" id="9BY-nD-Bf8"/>
                             <constraint firstItem="DFN-od-Zif" firstAttribute="top" secondItem="f0X-sp-J42" secondAttribute="top" constant="20" id="9WI-pW-4Ma"/>
+                            <constraint firstItem="f0X-sp-J42" firstAttribute="bottom" secondItem="8hw-qh-JK6" secondAttribute="bottom" constant="20" id="9nq-vJ-gbu"/>
                             <constraint firstItem="4jJ-XX-Tjr" firstAttribute="top" secondItem="3JT-KZ-woC" secondAttribute="bottom" constant="80" id="Tkk-v1-Orb"/>
                             <constraint firstItem="3JT-KZ-woC" firstAttribute="top" secondItem="DFN-od-Zif" secondAttribute="bottom" constant="40" id="V0I-UC-dRx"/>
                             <constraint firstItem="f0X-sp-J42" firstAttribute="bottom" secondItem="4jJ-XX-Tjr" secondAttribute="bottom" constant="80" id="Vas-nb-CLp"/>
@@ -289,6 +299,9 @@
                             <constraint firstItem="4jJ-XX-Tjr" firstAttribute="leading" secondItem="f0X-sp-J42" secondAttribute="leading" id="dnx-gm-MV9"/>
                             <constraint firstItem="f0X-sp-J42" firstAttribute="trailing" secondItem="4jJ-XX-Tjr" secondAttribute="trailing" id="gF4-Pt-J8S"/>
                             <constraint firstItem="f0X-sp-J42" firstAttribute="trailing" secondItem="DFN-od-Zif" secondAttribute="trailing" constant="20" id="qgF-wF-Cji"/>
+                            <constraint firstItem="8hw-qh-JK6" firstAttribute="leading" secondItem="f0X-sp-J42" secondAttribute="leading" constant="20" id="sNK-Bd-sgU"/>
+                            <constraint firstItem="8hw-qh-JK6" firstAttribute="top" secondItem="4jJ-XX-Tjr" secondAttribute="bottom" constant="10" id="sV4-Xf-GL3"/>
+                            <constraint firstItem="f0X-sp-J42" firstAttribute="trailing" secondItem="8hw-qh-JK6" secondAttribute="trailing" constant="20" id="spY-ET-BjJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kings Cup" largeTitleDisplayMode="never" id="thP-2i-eWB">
