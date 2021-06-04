@@ -138,4 +138,9 @@ extension SetupViewController: UITableViewDataSource {
 }
 
 
-
+extension SetupViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}

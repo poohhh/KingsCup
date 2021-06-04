@@ -146,13 +146,13 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
                                                     <connections>
                                                         <action selector="valueChanged:" destination="8ci-sB-Qlc" eventType="editingChanged" id="sEY-Ma-YYb"/>
                                                         <outlet property="delegate" destination="8ci-sB-Qlc" id="pgk-l5-Qc0"/>
                                                     </connections>
                                                 </textField>
-                                                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLN-pw-Qeh">
+                                                <button opaque="NO" tag="200" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLN-pw-Qeh">
                                                     <rect key="frame" x="319" y="12" width="65" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="remove">
@@ -164,8 +164,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="GLN-pw-Qeh" secondAttribute="trailing" constant="10" id="DuK-HO-S16"/>
-                                                <constraint firstItem="GLN-pw-Qeh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ll2-Un-i4t" secondAttribute="trailing" constant="10" id="Svh-OB-pjw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GLN-pw-Qeh" secondAttribute="trailing" constant="10" id="Q7m-HH-iCb"/>
                                                 <constraint firstItem="Ll2-Un-i4t" firstAttribute="centerY" secondItem="tBf-bS-XpR" secondAttribute="centerY" id="lQV-ta-aOs"/>
                                                 <constraint firstItem="GLN-pw-Qeh" firstAttribute="centerY" secondItem="tBf-bS-XpR" secondAttribute="centerY" id="mZh-32-gN0"/>
                                                 <constraint firstItem="Ll2-Un-i4t" firstAttribute="leading" secondItem="tBf-bS-XpR" secondAttribute="leading" constant="10" id="sYi-z3-5Lt"/>
