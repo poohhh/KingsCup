@@ -99,8 +99,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="howToPlayButton" destination="I26-l0-csL" id="Len-3E-0qI"/>
-                        <outlet property="imageView" destination="DHj-mj-7Se" id="ayv-kc-aUC"/>
-                        <outlet property="nameLabel" destination="Nes-nz-eVu" id="ok8-ia-f9o"/>
                         <outlet property="playButton" destination="Fkc-Lb-D4r" id="Qgi-Z4-5lk"/>
                         <outlet property="stackView" destination="Ktu-vJ-AkJ" id="eA0-8Y-WOu"/>
                     </connections>
@@ -237,20 +235,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-od-Zif">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-od-Zif">
                                 <rect key="frame" x="20" y="108" width="374" height="43.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-i9-Hos">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="43.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="진행한 카드수" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-Uu-8Rg">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YW-2S-vGZ">
-                                                <rect key="frame" x="0.0" y="22" width="87" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="22" width="137" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
@@ -259,16 +257,16 @@
                                         <color key="backgroundColor" red="0.90279642739999999" green="0.77041406990000005" blue="0.64644817919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bqk-l1-Ki0">
-                                        <rect key="frame" x="287" y="0.0" width="87" height="43.5"/>
+                                        <rect key="frame" x="237" y="0.0" width="137" height="43.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남은 카드수" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-Qb-PvM">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="17"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" text="35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q1-q5-HYd">
-                                                <rect key="frame" x="0.0" y="22" width="87" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="22" width="137" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
@@ -284,10 +282,10 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-KZ-woC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="purple" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-KZ-woC">
                                 <rect key="frame" x="0.0" y="191.5" width="414" height="484"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드를 뽑아줘!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hw-qh-JK6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드를 뽑아줘 !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hw-qh-JK6">
                                 <rect key="frame" x="20" y="792" width="374" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -472,9 +470,9 @@
     <resources>
         <image name="card_back" width="755" height="1057"/>
         <image name="crowns" width="128" height="128"/>
-        <image name="gray" width="691" height="1056"/>
         <image name="orange-rectangle" width="168" height="50"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="purple" width="691" height="1056"/>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

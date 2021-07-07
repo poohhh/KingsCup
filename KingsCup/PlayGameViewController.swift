@@ -9,16 +9,7 @@ import UIKit
 
 class PlayGameViewController: UIViewController {
     
-    let images = [UIImage(named: "gray")!,
-        UIImage(named: "red")!,
-        UIImage(named: "yellow")!,
-        UIImage(named: "green")!,
-        UIImage(named: "blue")!,
-        UIImage(named: "purple")!
-    ]
-
     @IBOutlet weak var imageView: UIImageView!
-    
     
     var users = [String]()
     var cards = [String]()
@@ -31,14 +22,13 @@ class PlayGameViewController: UIViewController {
     
     @IBOutlet weak var remainCardNum: UILabel!
     
-    
     var now = 0
     
     @IBOutlet weak var nowStack: UIStackView!
     
     @IBOutlet weak var remainStack: UIStackView!
     
-    var cardK_count = 0
+    var cardKCount = 0
     var card = ""
     var iscardK = false
     
@@ -80,14 +70,12 @@ class PlayGameViewController: UIViewController {
         }
         
         if card.hasPrefix("K") {
-            cardK_count += 1
-            print(cardK_count)
+            cardKCount += 1
+            print(cardKCount)
             iscardK = true
         } else {
             iscardK = false
         }
-        
-        imageView.stopAnimating()
     }
     
     @objc func exitAction(sender: UIBarButtonItem) {
@@ -96,7 +84,7 @@ class PlayGameViewController: UIViewController {
             self.navigationController?.popToRootViewController(animated: true)
         })
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action) in
-           
+            
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -108,7 +96,7 @@ class PlayGameViewController: UIViewController {
         })
         
         alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action) in
-           
+            
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -121,7 +109,7 @@ class PlayGameViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = exitButton
         
         let backButton = UIBarButtonItem(title: "설정", style: .plain, target: self, action: #selector(self.backAction(sender:)))
-
+        
         self.navigationItem.leftBarButtonItem = backButton
         
         
@@ -139,10 +127,6 @@ class PlayGameViewController: UIViewController {
         remainCardNum.text = "\(52 - now)"
         
         
-        imageView.animationImages = images
-        imageView.animationDuration = 0.8
-        imageView.animationRepeatCount = 0
-        
         shuffleCard()
         
     }
@@ -155,7 +139,7 @@ class PlayGameViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 self.navigationController?.popToRootViewController(animated: true)
             }))
-
+            
             self.present(alert, animated: true, completion: nil)
         }
         
@@ -164,20 +148,20 @@ class PlayGameViewController: UIViewController {
         }
         
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         imageView.startAnimating()
         
         if iscardK {
-            if cardK_count < 4 {
-                let alert = UIAlertController(title: "King 카드가 나왔네요!", message: "\(cardK_count)번째 킹스컵을 제조하세요!", preferredStyle: .alert)
+            if cardKCount < 4 {
+                let alert = UIAlertController(title: "King 카드가 나왔네요!", message: "\(cardKCount)번째 킹스컵을 제조하세요!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
                 })
                 
                 self.present(alert, animated: true, completion: nil)
-            } else if cardK_count == 4 {
+            } else if cardKCount == 4 {
                 let alert = UIAlertController(title: "킹스컵 당첨!", message: "킹스컵 걸렸습니다~!", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
                 })
@@ -198,6 +182,19 @@ class PlayGameViewController: UIViewController {
             playedCardNum.text = "\(now)"
             remainCardNum.text = "\(52 - now)"
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let animation = CAKeyframeAnimation(keyPath: "transform.scale")
+        
+        animation.values = [1.0, 1.2, 1.0]
+        animation.keyTimes = [0, 0.5, 1]
+        animation.duration = 1.0
+        animation.repeatCount = Float.infinity
+        imageView.layer.add(animation, forKey: "pulse")
+        
     }
 }
 
