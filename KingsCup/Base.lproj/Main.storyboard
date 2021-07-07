@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Ktu-vJ-AkJ">
-                                <rect key="frame" x="20" y="108" width="374" height="422"/>
+                                <rect key="frame" x="20" y="108" width="374" height="418"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crowns" translatesAutoresizingMaskIntoConstraints="NO" id="DHj-mj-7Se">
                                         <rect key="frame" x="123" y="0.0" width="128" height="128"/>
@@ -47,14 +47,14 @@
                                         <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="3" height="-2"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="nCo-a0-miJ">
-                                        <rect key="frame" x="82" y="278" width="210" height="144"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="nCo-a0-miJ">
+                                        <rect key="frame" x="87" y="278" width="200" height="140"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkc-Lb-D4r">
-                                                <rect key="frame" x="2" y="0.0" width="206" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
                                                 <color key="backgroundColor" red="1" green="0.64638138519999999" blue="0.090594227200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="     Play Game!    " backgroundImage="orange-rectangle">
+                                                <state key="normal" title="게임 시작!" backgroundImage="orange-rectangle">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -62,10 +62,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I26-l0-csL">
-                                                <rect key="frame" x="0.0" y="94" width="210" height="50"/>
+                                                <rect key="frame" x="0.0" y="90" width="200" height="50"/>
                                                 <color key="backgroundColor" red="1" green="0.64638138519999999" blue="0.090594227200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <state key="normal" title="    How To Play    " backgroundImage="orange-rectangle">
+                                                <state key="normal" title="게임 방법" backgroundImage="orange-rectangle">
                                                     <color key="titleColor" red="0.61838754979999999" green="0.021380769859999999" blue="0.36623531549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -73,6 +73,15 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="I26-l0-csL" secondAttribute="trailing" id="KzK-T4-Tbi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fkc-Lb-D4r" secondAttribute="trailing" id="MR7-Ad-Es9"/>
+                                            <constraint firstAttribute="bottom" secondItem="I26-l0-csL" secondAttribute="bottom" id="QyV-lk-qo1"/>
+                                            <constraint firstItem="Fkc-Lb-D4r" firstAttribute="leading" secondItem="nCo-a0-miJ" secondAttribute="leading" id="at8-DB-Lqw"/>
+                                            <constraint firstItem="I26-l0-csL" firstAttribute="leading" secondItem="nCo-a0-miJ" secondAttribute="leading" id="iXJ-eb-z2W"/>
+                                            <constraint firstItem="Fkc-Lb-D4r" firstAttribute="top" secondItem="nCo-a0-miJ" secondAttribute="top" id="uC1-pZ-swt"/>
+                                            <constraint firstAttribute="width" constant="200" id="xGZ-7q-PyO"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -86,7 +95,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="ycC-6J-sQc">
-                        <barButtonItem key="backBarButtonItem" title="Home" id="gbf-Vy-rO1"/>
+                        <barButtonItem key="backBarButtonItem" title="홈" id="gbf-Vy-rO1"/>
                     </navigationItem>
                     <connections>
                         <outlet property="howToPlayButton" destination="I26-l0-csL" id="Len-3E-0qI"/>
@@ -100,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="-10" y="88"/>
         </scene>
-        <!--Player Setup-->
+        <!--설정하기-->
         <scene sceneID="hIu-UZ-9JC">
             <objects>
                 <viewController id="8ci-sB-Qlc" customClass="SetupViewController" customModule="KingsCup" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,7 +129,7 @@
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGk-09-tYN">
                                         <rect key="frame" x="307" y="8" width="99" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Add" image="plus" catalog="system"/>
+                                        <state key="normal" title="추가" image="plus" catalog="system"/>
                                         <connections>
                                             <action selector="addPlayer:" destination="8ci-sB-Qlc" eventType="touchUpInside" id="tJF-hf-X0b"/>
                                         </connections>
@@ -141,7 +150,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Player name" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ll2-Un-i4t">
+                                                <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="이름 " borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ll2-Un-i4t">
                                                     <rect key="frame" x="10" y="12" width="145" height="36"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -156,9 +165,9 @@
                                                     </connections>
                                                 </textField>
                                                 <button opaque="NO" tag="200" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLN-pw-Qeh">
-                                                    <rect key="frame" x="319" y="12" width="65" height="36"/>
+                                                    <rect key="frame" x="349" y="12" width="35" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <state key="normal" title="remove">
+                                                    <state key="normal" title="삭제">
                                                         <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
@@ -184,7 +193,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FK-1S-DmP">
                                 <rect key="frame" x="30" y="732" width="354" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Start Game!" backgroundImage="orange-rectangle">
+                                <state key="normal" title="게임 시작!" backgroundImage="orange-rectangle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                 </state>
@@ -208,8 +217,8 @@
                             <constraint firstItem="6rb-jz-8zs" firstAttribute="top" secondItem="xVL-rT-4pQ" secondAttribute="top" id="zcl-82-ogi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Player Setup" id="tu0-8f-EkC">
-                        <barButtonItem key="backBarButtonItem" title="Reset" id="xiV-jQ-DDH"/>
+                    <navigationItem key="navigationItem" title="설정하기" id="tu0-8f-EkC">
+                        <barButtonItem key="backBarButtonItem" title="설정" id="xiV-jQ-DDH"/>
                     </navigationItem>
                     <connections>
                         <outlet property="playerTableView" destination="TaU-qc-3Fx" id="fCC-Wb-jEU"/>
@@ -220,7 +229,7 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="-450"/>
         </scene>
-        <!--Kings Cup-->
+        <!--킹스컵-->
         <scene sceneID="xuq-2P-2DZ">
             <objects>
                 <viewController id="Hcj-3W-t8i" customClass="PlayGameViewController" customModule="KingsCup" customModuleProvider="target" sceneMemberID="viewController">
@@ -229,19 +238,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="DFN-od-Zif">
-                                <rect key="frame" x="20" y="108" width="374" height="34.5"/>
+                                <rect key="frame" x="20" y="108" width="374" height="43.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-i9-Hos">
-                                        <rect key="frame" x="0.0" y="0.0" width="87" height="34.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qkl-i9-Hos">
+                                        <rect key="frame" x="0.0" y="0.0" width="87" height="43.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="now" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-Uu-8Rg">
-                                                <rect key="frame" x="0.0" y="0.0" width="87" height="13"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="진행한 카드수" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-Uu-8Rg">
+                                                <rect key="frame" x="0.0" y="0.0" width="87" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YW-2S-vGZ">
-                                                <rect key="frame" x="0.0" y="13" width="87" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="22" width="87" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
@@ -249,17 +258,17 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.90279642739999999" green="0.77041406990000005" blue="0.64644817919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="Bqk-l1-Ki0">
-                                        <rect key="frame" x="287" y="0.0" width="87" height="34.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bqk-l1-Ki0">
+                                        <rect key="frame" x="287" y="0.0" width="87" height="43.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="remain" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-Qb-PvM">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남은 카드수" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-Qb-PvM">
                                                 <rect key="frame" x="0.0" y="0.0" width="87" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" tag="200" contentMode="left" horizontalHuggingPriority="251" text="35" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q1-q5-HYd">
-                                                <rect key="frame" x="0.0" y="13" width="87" height="21.5"/>
+                                                <rect key="frame" x="0.0" y="22" width="87" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
@@ -276,9 +285,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-KZ-woC">
-                                <rect key="frame" x="0.0" y="182.5" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="191.5" width="414" height="484"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Card!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hw-qh-JK6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드를 뽑아줘!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hw-qh-JK6">
                                 <rect key="frame" x="20" y="792" width="374" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -304,8 +313,8 @@
                             <constraint firstItem="f0X-sp-J42" firstAttribute="trailing" secondItem="8hw-qh-JK6" secondAttribute="trailing" constant="20" id="spY-ET-BjJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Kings Cup" largeTitleDisplayMode="never" id="thP-2i-eWB">
-                        <barButtonItem key="rightBarButtonItem" title="Exit" id="FRE-rG-Klh"/>
+                    <navigationItem key="navigationItem" title="킹스컵" largeTitleDisplayMode="never" id="thP-2i-eWB">
+                        <barButtonItem key="rightBarButtonItem" title="나가기" id="FRE-rG-Klh"/>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="3JT-KZ-woC" id="arU-SW-1BR"/>
@@ -344,7 +353,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5y-ca-mfW">
                                 <rect key="frame" x="40" y="752" width="334" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="Next Player" backgroundImage="orange-rectangle">
+                                <state key="normal" title="다음 Player" backgroundImage="orange-rectangle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -389,7 +398,7 @@
             </objects>
             <point key="canvasLocation" x="2550.7246376811595" y="-449.33035714285711"/>
         </scene>
-        <!--How To Play-->
+        <!--게임 방법-->
         <scene sceneID="zOe-rS-8ie">
             <objects>
                 <viewController id="exM-7x-Ccj" customClass="HowToPlayViewController" customModule="KingsCup" customModuleProvider="target" sceneMemberID="viewController">
@@ -449,7 +458,7 @@
                             <constraint firstItem="1oq-3n-kae" firstAttribute="top" secondItem="msY-qS-9Gn" secondAttribute="top" id="z91-MI-nJe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="How To Play" id="goQ-ov-2Ch"/>
+                    <navigationItem key="navigationItem" title="게임 방법" id="goQ-ov-2Ch"/>
                     <connections>
                         <outlet property="tableView" destination="1oq-3n-kae" id="U8d-kN-U26"/>
                     </connections>

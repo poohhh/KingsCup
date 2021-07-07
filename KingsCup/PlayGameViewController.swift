@@ -91,7 +91,7 @@ class PlayGameViewController: UIViewController {
     }
     
     @objc func exitAction(sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Exit", message: "처음으로 돌아가시겠습니까?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "나가기", message: "처음으로 돌아가시겠습니까?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
             self.navigationController?.popToRootViewController(animated: true)
         })
@@ -102,7 +102,7 @@ class PlayGameViewController: UIViewController {
     }
     
     @objc func backAction(sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Reset", message: "Player를 재설정하시겠습니까?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "설정", message: "Player를 재설정하시겠습니까?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default) { (action) in
             self.navigationController?.popViewController(animated: true)
         })
@@ -116,11 +116,11 @@ class PlayGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let exitButton = UIBarButtonItem(title: "Exit", style: .plain, target: self, action: #selector(self.exitAction(sender:)))
+        let exitButton = UIBarButtonItem(title: "나가기", style: .plain, target: self, action: #selector(self.exitAction(sender:)))
         
         self.navigationItem.rightBarButtonItem = exitButton
         
-        let backButton = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(self.backAction(sender:)))
+        let backButton = UIBarButtonItem(title: "설정", style: .plain, target: self, action: #selector(self.backAction(sender:)))
 
         self.navigationItem.leftBarButtonItem = backButton
         

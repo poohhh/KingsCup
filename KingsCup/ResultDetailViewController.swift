@@ -9,7 +9,6 @@ import UIKit
 
 class ResultDetailViewController: UIViewController {
     
-   
     @IBOutlet weak var cardDescription: UITextView!
     
     @IBOutlet weak var cardName: UILabel!

@@ -10,9 +10,6 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var nameLabel: UILabel!
     
     @IBOutlet weak var playButton: UIButton!
     
