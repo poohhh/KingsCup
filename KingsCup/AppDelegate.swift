@@ -5,13 +5,6 @@
 //  Created by Nayomi on 3/10/21.
 //
 
-//
-//  AppDelegate.swift
-//  FrameLayout
-//
-//  Created by Nayomi on 4/26/21.
-//
-
 import UIKit
 import IQKeyboardManagerSwift
 

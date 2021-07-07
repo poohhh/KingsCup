@@ -17,6 +17,7 @@
 		BA0D040725F8F2F3005178C0 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0D040625F8F2F3005178C0 /* HowToPlayViewController.swift */; };
 		BA4DD2C025F9CBC9004C1FFA /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4DD2BF25F9CBC9004C1FFA /* SetupViewController.swift */; };
 		BA8A17B925FB469D00C19BFD /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8A17B825FB469D00C19BFD /* ResultDetailViewController.swift */; };
+		BACEE9E52695834900DA2309 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACEE9E42695834900DA2309 /* Rule.swift */; };
 		BAD4ECC425FA1DE20080A981 /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD4ECC325FA1DE20080A981 /* PlayGameViewController.swift */; };
 		E84EC4F4F3275958286B269B /* Pods_KingsCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC7DFF5914BA27816A57FD /* Pods_KingsCup.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		BA0D040625F8F2F3005178C0 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 		BA4DD2BF25F9CBC9004C1FFA /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		BA8A17B825FB469D00C19BFD /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
+		BACEE9E42695834900DA2309 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		BAD4ECC325FA1DE20080A981 /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 		FB8564EA695C614669FB4DD1 /* Pods-KingsCup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KingsCup.debug.xcconfig"; path = "Target Support Files/Pods-KingsCup/Pods-KingsCup.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				BA0D03FB25F8F073005178C0 /* LaunchScreen.storyboard */,
 				BA0D03FE25F8F073005178C0 /* Info.plist */,
 				BA0D03F625F8F072005178C0 /* KingsCup.xcdatamodeld */,
+				BACEE9E42695834900DA2309 /* Rule.swift */,
 			);
 			path = KingsCup;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				BA8A17B925FB469D00C19BFD /* ResultDetailViewController.swift in Sources */,
 				BA0D03F225F8F072005178C0 /* ViewController.swift in Sources */,
 				BAD4ECC425FA1DE20080A981 /* PlayGameViewController.swift in Sources */,
+				BACEE9E52695834900DA2309 /* Rule.swift in Sources */,
 				BA0D03F825F8F072005178C0 /* KingsCup.xcdatamodeld in Sources */,
 				BA0D03EE25F8F072005178C0 /* AppDelegate.swift in Sources */,
 				BA0D03F025F8F072005178C0 /* SceneDelegate.swift in Sources */,
